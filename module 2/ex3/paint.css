@@ -1,0 +1,23 @@
+table {
+	margin-left: auto;
+	margin-right: auto; /*Both margins are used to center the table indeed*/
+	text-align: center; /*To center the content*/
+	background-color: aliceblue;
+	border: groove;
+}
+
+table thead {
+	font-size: x-large;
+	font-family: fantasy;
+	color: darkslategray;
+}
+
+table td {
+	border-color: black;
+}
+
+table tbody {
+	font-size: large;
+	font-family: monospace;
+	background-color: steelblue;
+}

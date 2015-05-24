@@ -1,0 +1,70 @@
+<!--Exercise 8 (More DOM manipulation and strings processing).
+Show in the page the numbers from x - y after pressing a button (even = steelblue, odd = gray), and delete the numbers after pressing another button-->
+<!DOCTYPE html>
+
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+<label for="x">Enter the lowest number</label>
+<input id="x" type="number"/>
+<hr/>
+<label for="y">Enter the highest number</label>
+<input id="y" type="number"/>
+<hr/>
+<button onclick="print()">Show</button>
+<button>Disappear</button>
+<button onclick="quit('Even')">Remove Even</button>
+<button onclick="quit('Odd')">Remove Odd</button>
+<script>
+	var h1s = [];
+	//querySelectorAll doesn't return a real array it returns a nodeList so .forEach and other methods aren't provided.
+	var button2 = document.querySelectorAll("button")[1];
+
+	button2.onclick = function () {
+		h1s.forEach(function (element) {
+			document.body.removeChild(element);
+		});
+
+		h1s = h1s.filter(function () {
+			return false;
+		});
+	};
+
+	var print = function () {
+		var inputs = document.querySelectorAll("input");
+
+		for (var i = parseInt(inputs[0].value); i <= parseInt(inputs[1].value); i++) {
+			var h1 = document.createElement("h1");
+			h1.innerHTML = "Number ".concat(i + "");
+			h1.style.backgroundColor = (i % 2 === 0) ? "steelblue" : "gray";
+			document.body.appendChild(h1);
+			h1s.push(h1);
+		}
+	};
+
+	var quit = function (hint) {
+		//We can analyze the DOM directly or the array where we have the inputs.
+		//Option 1 (Directly from the dom) Try by yourself hint: querySelectorAll...
+		//Option 2 (Using the array)
+
+		h1s.filter(function (element) {
+			//"element" is a "copy" of the real HTMLNodeElement
+			//match returns an array with all the matches.
+			var a = element.innerHTML.match(/[0-9]+\w|[0-9]/g); //todo: Practice regular expressions http://www.regexr.com/
+			return (parseInt(a[0]) % ((hint === "Even") ? 2 : 1) === 0);
+		}).forEach(function (element) {
+			h1s.forEach(function (otherElement, index, self) {
+				if (element === otherElement) {
+					//Remove from the array and DOM.
+					document.body.removeChild(otherElement);
+					self.splice(index, 1);
+				}
+			});
+		});
+	};
+</script>
+</body>
+</html>

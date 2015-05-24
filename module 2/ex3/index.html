@@ -1,0 +1,86 @@
+<!--Exercise 3. Adding Styles-->
+<!DOCTYPE html>
+
+<html>
+<head lang="en">
+	<link rel="stylesheet" href="paint.css"/>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+<label for="jsonText">Insert yout Json</label>
+<br/>
+<textarea placeholder="Insert your Json here" name="jsonText" id="jsonText" cols="50" rows="30">
+{
+	"response" : [
+		{
+			"name":"Alberto",
+			"lastName": "Bonsanto",
+			"age": 24
+		},
+		{
+			"name":"Dakota",
+			"lastName": "Bonsanto",
+			"age": 3
+		},
+		{
+			"name":"Windows",
+			"lastName": "Microsoft",
+			"age": 30
+		},
+		{
+			"name":"Barack",
+			"lastName": "Obama",
+			"age": "?"
+		}
+	]
+}
+</textarea>
+<br/>
+<button onclick="print()">Generate the Table</button>
+<hr/>
+<script>
+	var print = function () {
+		var json = document.querySelector("textarea").value;
+
+		if (JSON.parse(json)) {
+			json = JSON.parse(json);
+			var table = document.createElement("table"),
+					thead = document.createElement("thead"),
+					tbody = document.createElement("tbody"),
+					trow = document.createElement("tr");
+
+			//Get the name of the fields
+			for (var pro in json.response[0]) {
+				if (json.response[0].hasOwnProperty(pro)) {
+					var td = document.createElement("td");
+					td.innerHTML = pro;
+					trow.appendChild(td);
+				}
+			}
+
+			//Get the values for each object.
+			json.response.forEach(function (obj) {
+				var row = document.createElement("tr");
+
+				for (var pro in obj) {
+					if (obj.hasOwnProperty(pro)) {
+						var col = document.createElement("td");
+						col.innerHTML = obj[pro];
+						row.appendChild(col);
+					}
+				}
+				tbody.appendChild(row);
+			});
+
+			thead.appendChild(trow);
+			table.appendChild(thead);
+			table.appendChild(tbody);
+			document.body.appendChild(table);
+		} else {
+			alert("Insert a proper JSON");
+		}
+	}
+</script>
+</body>
+</html>

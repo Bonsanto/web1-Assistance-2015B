@@ -1,0 +1,29 @@
+<!--Exercise 5 (Manipulating the DOM v1). Show in the page the numbers from x - y after pressing a button-->
+<!DOCTYPE html>
+
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+<label for="x">Enter the lowest number</label>
+<input id="x" type="number"/>
+<hr/>
+<label for="y">Enter the highest number</label>
+<input id="y" type="number"/>
+<hr/>
+<button onclick="print()">Click me</button>
+<script>
+	var print = function () {
+		var inputs = document.querySelectorAll("input");
+
+		for (var i = parseInt(inputs[0].value); i <= parseInt(inputs[1].value); i++) {
+			var h1 = document.createElement("h1");
+			h1.innerHTML = "Number ".concat(i + "");
+			document.body.appendChild(h1);
+		}
+	};
+</script>
+</body>
+</html>

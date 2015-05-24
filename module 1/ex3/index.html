@@ -1,0 +1,28 @@
+<!--Exercise 3 (querySelector).  Print numbers from x - y after pressing a button-->
+<!DOCTYPE html>
+
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+<label for="x">Enter the lowest number</label>
+<input id="x" type="number"/>
+<hr/>
+<label for="y">Enter the highest number</label>
+<input id="y" type="number"/>
+<hr/>
+<button onclick="print()">Click me</button>
+<script>
+	var print = function () {
+		var init = parseInt(document.querySelector("#x").value); // You can alternatively use var init = document.getElementById("x");
+		var final = parseInt(document.querySelector("#y").value);
+
+		for (var i = init; i < final; i++) {
+			console.log(i);
+		}
+	};
+</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!--Exercise 3. Adding Styles-->
+<!DOCTYPE html>
+
+<html>
+<head lang="en">
+	<link rel="stylesheet" href="paint.css"/>
+	<script src="x-table.js"></script>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+<label for="jsonText">Insert yout Json</label>
+<br/>
+<textarea placeholder="Insert your Json here" name="jsonText" id="jsonText" cols="50" rows="30">
+{
+	"response" : [
+		{
+			"name":"Alberto",
+			"lastName": "Bonsanto",
+			"age": 24
+		},
+		{
+			"name":"Dakota",
+			"lastName": "Bonsanto",
+			"age": 3
+		},
+		{
+			"name":"Windows",
+			"lastName": "Microsoft",
+			"age": 30
+		},
+		{
+			"name":"Barack",
+			"lastName": "Obama",
+			"age": "?"
+		}
+	]
+}
+</textarea>
+<br/>
+<button onclick="print()">Generate the Table</button>
+<hr/>
+<x-table>Here comes the table</x-table>
+<script>
+	//todo: Add css typical problem with web components
+	var print = function () {
+		var table = document.querySelector("x-table");
+		table.data = JSON.parse(document.querySelector("textarea").value);
+	};
+</script>
+</body>
+</html>

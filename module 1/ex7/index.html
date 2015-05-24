@@ -1,0 +1,46 @@
+<!--Exercise 7 (Visual changes and ternary operator).
+Show in the page the numbers from x - y after pressing a button (even = steelblue, odd = gray), and delete the numbers after pressing another button-->
+<!DOCTYPE html>
+
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+<label for="x">Enter the lowest number</label>
+<input id="x" type="number"/>
+<hr/>
+<label for="y">Enter the highest number</label>
+<input id="y" type="number"/>
+<hr/>
+<button onclick="print()">Show</button>
+<button>Disappear</button>
+<script>
+	var h1s = [];
+	var button2 = document.querySelectorAll("button")[1];
+
+	button2.onclick = function () {
+		h1s.forEach(function (element) {
+			document.body.removeChild(element);
+		});
+
+		h1s = h1s.filter(function () {
+			return false;
+		});
+	};
+
+	var print = function () {
+		var inputs = document.querySelectorAll("input");
+
+		for (var i = parseInt(inputs[0].value); i <= parseInt(inputs[1].value); i++) {
+			var h1 = document.createElement("h1");
+			h1.innerHTML = "Number ".concat(i + "");
+			h1.style.backgroundColor = (i % 2 === 0) ? "steelblue" : "gray";
+			document.body.appendChild(h1);
+			h1s.push(h1);
+		}
+	};
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!--Exercise 1. JSONs and HTML-->
+<!DOCTYPE html>
+
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+<label for="jsonText">Insert yout Json</label>
+<br/>
+<textarea placeholder="Insert your Json here" name="jsonText" id="jsonText" cols="40" rows="30"></textarea>
+<br/>
+<button onclick="print()">Generate the Table</button>
+<hr/>
+<script>
+	var print = function () {
+		var json = document.querySelector("textarea").value;
+
+		if (JSON.parse(json)) {
+			var h1 = document.createElement("h1");
+			h1.innerHTML = json;
+			document.body.appendChild(h1);
+		} else {
+			alert("Insert a proper JSON");
+		}
+	}
+</script>
+</body>
+</html>
