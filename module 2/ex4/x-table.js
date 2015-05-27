@@ -26,20 +26,20 @@ Object.defineProperties(XTableProto, {
 			return this.json;
 		},
 		set: function (value) {
-			var json = value;
+		 	this.json = value;
 
 			if (this.shadowRoot)
 				this.shadowRoot.removeChild(this.shadowRoot.querySelector("table"));
 
-			if (json.constructor === Object) {
+			if (this.json.constructor === Object) {
 				var table = document.createElement("table"),
 					thead = document.createElement("thead"),
 					tbody = document.createElement("tbody"),
 					trow = document.createElement("tr");
 
 				//Get the name of the fields
-				for (var pro in json.response[0]) {
-					if (json.response[0].hasOwnProperty(pro)) {
+				for (var pro in this.json.response[0]) {
+					if (this.json.response[0].hasOwnProperty(pro)) {
 						var td = document.createElement("td");
 						td.innerHTML = pro;
 						trow.appendChild(td);
@@ -47,7 +47,7 @@ Object.defineProperties(XTableProto, {
 				}
 
 				//Get the values for each object.
-				json.response.forEach(function (obj) {
+				this.json.response.forEach(function (obj) {
 					var row = document.createElement("tr");
 
 					for (var pro in obj) {
@@ -63,7 +63,7 @@ Object.defineProperties(XTableProto, {
 				thead.appendChild(trow);
 				table.appendChild(thead);
 				table.appendChild(tbody);
-				this.shadowRoot? this.shadowRoot.appendChild(table) : this.createShadowRoot().appendChild(table);
+				this.shadowRoot ? this.shadowRoot.appendChild(table) : this.createShadowRoot().appendChild(table);
 			} else {
 				alert("Insert a proper JSON");
 			}

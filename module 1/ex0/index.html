@@ -1,0 +1,53 @@
+<!--Exercise 0. Basic things of JavaScript-->
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+<script>
+	//Primitives in JavaScript.
+	var variables = ["Alberto", 0.3, 2, true, null, undefined];
+
+	variables.forEach(function (element) {
+		console.log(typeof element);
+	});
+
+	//Instantiating Built-in Types.
+	//Example Date, Array, Error, Function, Object, RegExp
+	var types = [new Array(), new Date(), new Error("Something bad happened"), new Function("console.log('Hello World')"),
+		new Object(), new RegExp("\\d+")];
+
+	types.forEach(function (element) {
+		console.log(element.constructor); //recommended over instanceof
+	});
+
+	//Arrays vs Dictionaries
+	var a = [];
+	a["value"] = 23;
+
+	//Doesn't show anything because a["value"] is not considered part of the array,
+	//Tt is considered part of a dictionary.
+	a.forEach(function (element) {
+		console.log(element);
+	});
+	console.log(a.length); //Shows 0
+
+	a[23] = "value";
+
+	//Shows "value" because it is considered part of the array.
+	a.forEach(function (element) {
+		console.log(element);
+	});
+	console.log(a.length); //shows 24, because it fills the missing parts of the array with undefined.
+
+	//How can I access that "value" then? There are two ways.
+	console.log(a["value"]);
+	console.log(a.value);
+
+	//Shows the array.
+	console.log(a);
+</script>
+</body>
+</html>
