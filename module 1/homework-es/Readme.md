@@ -4,6 +4,7 @@ Programar un div con ciertas dimensiones y color, que persiga en la página al cu
 ###Pistas:
 - Utilizar las propiedades <a href="http://www.w3schools.com/jsref/prop_style_left.asp">style.left</a> y <a href="http://www.w3schools.com/jsref/prop_style_top.asp">style.top</a>.
 - Utilizar las propiedades <a href="https://developer.mozilla.org/en-US/docs/Web/API/UIEvent/pageX">PageX</a> y <a href="https://developer.mozilla.org/en-US/docs/Web/API/UIEvent/pageY">PageY</a> de los eventos.
+- Utilizar el evento <a href="http://www.w3schools.com/jsref/event_onmousemove.asp">onmousemove</a>.
 - Leer sobre <a href="http://stackoverflow.com/questions/6073505/what-is-the-difference-between-screenx-y-clientx-y-and-pagex-y">Diferencias entre screenX, pageX y clientX</a>.
 
 <hr/>
