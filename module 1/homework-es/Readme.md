@@ -15,14 +15,14 @@ var a = concat([["a", "bon"], ["1", "p", "dr"], ["j", "w", "javascript"], [ "23"
 console.log(a); // a -> "a;bon.1;p;dr.j;w;javascript.23;45;html"
 ```
 ###Pistas:
-- Utilizar los métodos de <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">Array Map*</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join">Join*</a> y <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/forEach">forEach</a> (Lo más conveniente para aprender)
-- También se pueden usar los ciclos repetitivos for clásicos <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in">for in</a> y <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for">for</a>
+- Utilizar los métodos de Array<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">Map*</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join">Join*</a> y <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/forEach">forEach</a> (Lo más conveniente para aprender).
+- También se pueden usar los ciclos repetitivos for clásicos <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in">for in</a> y <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for">for</a>.
 
 <hr/>
 #Ejercicio 3.
 Programar una página web que posea un input del tipo number que represente los grados centígrados de un termómetro, a partir del valor que se vaya introduciendo en dicho input un div insertado en otro debe asumir una proporción en tamaño del div mayor, con el objetivo de representar los grandos centígrados y permitir de forma dinámica la modificación de la temperatura.
 
 ###Pistas.
-- Utilizar las propiedades <a href="http://www.w3schools.com/jsref/prop_style_height.asp">style.height</a> y <a href="http://www.w3schools.com/jsref/prop_style_width.asp">style.width</a>
-- Utilizar el evento <a href="http://www.w3schools.com/jsref/event_onchange.asp">onchange</a>
+- Utilizar las propiedades <a href="http://www.w3schools.com/jsref/prop_style_height.asp">style.height</a> y <a href="http://www.w3schools.com/jsref/prop_style_width.asp">style.width</a>.
+- Utilizar el evento <a href="http://www.w3schools.com/jsref/event_onchange.asp">onchange</a>.
 <hr/>
