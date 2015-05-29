@@ -2,14 +2,16 @@ Ejercicio 1.
 Programar un div con ciertas dimensiones y color, que persiga en la página al cursor del mouse.
 
 Pistas:
-- Utilizar las propiedades  style.left y style.top
+- Utilizar las propiedades <a href="http://www.w3schools.com/jsref/prop_style_left.asp">style.left</a> y style.top
 - Utilizar los eventos Getting the coordinates of the mouse (pageX, pageY)
 
 Ejercicio 2.
 Programar una función en JS (EcmaScript 5) que reciba 3 argumentos, el primero un arreglo bidimensional (que puede tener n arreglos internos, y dichos arreglos m cadenas adentro), el segundo y tercero cadenas de caracteres que funcionan como separadores, dicha función debe permitir concatenar las cadenas de caracteres localizadas dentro del arreglo bi-dimensional, utilizando el segundo parámetro como separador entre cadena y el tercer parámetro como separador entre arreglo, un ejemplo se muestra a continuación.
 
- var a = concat([["a","bon"],["1","p","dr"],["j","w","javascript"],["23","45","html"]], ";",".");
-// a -> "a;bon.1;p;dr.j;w;javascript.23;45;html"
+```javascript
+var a = concat([["a", "bon"], ["1", "p", "dr"], ["j", "w", "javascript"], [ "23", "45", "html"]], ";", ".");
+console.log(a); // a -> "a;bon.1;p;dr.j;w;javascript.23;45;html"
+```
 
 Pistas:
 - Utilizar los métodos de Array Map* Join* y forEach (Lo más conveniente para aprender)
