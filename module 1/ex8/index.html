@@ -42,6 +42,18 @@ Show in the page the numbers from x - y after pressing a button (even = steelblu
 			h1.style.backgroundColor = (i % 2 === 0) ? "steelblue" : "gray";
 			document.body.appendChild(h1);
 			h1s.push(h1);
+
+			//More events
+			h1.onmouseover = function () {
+				var prev = this.style.backgroundColor;
+				this.style.backgroundColor = "aliceblue";
+
+				this.onmouseout = function () {
+					this.style.backgroundColor = prev;
+				};
+			};
+			document.body.appendChild(h1);
+			h1s.push(h1);
 		}
 	};
 
