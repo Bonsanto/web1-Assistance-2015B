@@ -15,7 +15,7 @@ var a = concat([["a", "bon"], ["1", "p", "dr"], ["j", "w", "javascript"], [ "23"
 console.log(a); // a -> "a;bon.1;p;dr.j;w;javascript.23;45;html"
 ```
 ###Pistas:
-- Utilizar los métodos de Array<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">Map*</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join">Join*</a> y <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/forEach">forEach</a> (Lo más conveniente para aprender).
+- Utilizar los métodos de Array <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">Map*</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join">Join*</a> y <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/forEach">forEach</a> (Lo más conveniente para aprender).
 - También se pueden usar los ciclos repetitivos for clásicos <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in">for in</a> y <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for">for</a>.
 
 <hr/>
