@@ -3,4 +3,4 @@ Repository with some exercices of the course Web 1 Development from URU (Univers
 
 <h3>Contact me</h3>
 <hr/>
-<a href="xbonsx@gmail.com">Bonsanto's contant Email</a>
+<a href="xbonsx@gmail.com">Bonsanto's Email</a>
